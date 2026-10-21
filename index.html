@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurul Najihah | Portfolio & Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+            section[id] { scroll-margin-top: 70px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+<!-- Navigation -->
+<section class="relative z-50">
+<nav class="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/90 shadow-lg shadow-black/10 backdrop-blur-md">
+
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10 lg:px-8">
+
+        <!-- Logo -->
+        <a href="#home"
+        class="text-2xl font-extrabold tracking-tight text-indigo-400 transition hover:text-indigo-300">
+            NN<span class="text-white">.</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div id="desktop-nav"
+             class="hidden items-center gap-8 text-sm font-medium md:flex">
+
+            <a href="#home" data-section="home" class="nav-link text-slate-300">
+                Home
+            </a>
+
+            <a href="#growth" data-section="growth" class="nav-link text-slate-300">
+                About
+            </a>
+
+            <a href="#about" data-section="about" class="nav-link text-slate-300">
+                Education & Experience
+            </a>
+
+            <a href="#projects" data-section="projects" class="nav-link text-slate-300">
+                Projects
+            </a>
+
+            <a href="#skills" data-section="skills" class="nav-link text-slate-300">
+                Skills
+            </a>
+
+        </div>
+
+        <!-- Desktop Call to Action -->
+        <a href="#contact"
+           class="hidden rounded-full border border-indigo-400/40 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 transition hover:bg-indigo-500/20 md:inline-flex">
+            Let's Talk
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+            id="mobile-menu-button"
+            type="button"
+            class="inline-flex items-center justify-center rounded-lg border border-white/10 p-2 text-slate-200 transition hover:bg-white/10 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 md:hidden"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false">
+
+            <!-- Hamburger Icon -->
+            <svg id="menu-open-icon"
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 stroke-width="2">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <!-- Close Icon -->
+            <svg id="menu-close-icon"
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="hidden h-6 w-6"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 stroke-width="2">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12" />
+            </svg>
+
+        </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu"
+         class="hidden border-t border-white/10 bg-slate-950/95 px-6 pb-6 pt-3 shadow-xl md:hidden">
+
+        <div class="flex flex-col gap-1 text-sm font-medium">
+
+            <a href="#home"
+               data-section="home"
+               class="nav-link text-slate-300 rounded-lg px-4 py-3 transition hover:bg-indigo-500/10 hover:text-indigo-400">
+                Home
+            </a>
+
+            <a href="#growth"
+               data-section="growth"
+               class="nav-link text-slate-300 rounded-lg px-4 py-3 transition hover:bg-indigo-500/10 hover:text-indigo-400">
+                About
+            </a>
+
+            <a href="#about"
+               data-section="about"
+               class="nav-link text-slate-300 rounded-lg px-4 py-3 transition hover:bg-indigo-500/10 hover:text-indigo-400">
+                Education & Experience
+            </a>
+
+            <a href="#projects"
+               data-section="projects"
+               class="nav-link text-slate-300 rounded-lg px-4 py-3 transition hover:bg-indigo-500/10 hover:text-indigo-400">
+                Projects
+            </a>
+
+            <a href="#skills"
+               data-section="skills"
+               class="nav-link text-slate-300 rounded-lg px-4 py-3 transition hover:bg-indigo-500/10 hover:text-indigo-400">
+                Skills
+            </a>
+
+            <!-- Mobile Call to Action -->
+            <a href="#contact"
+               class="mt-3 rounded-full border border-indigo-400/40 bg-indigo-500/10 px-4 py-3 text-center font-medium text-indigo-300 transition hover:bg-indigo-500/20">
+                Let's Talk
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Mobile Navigation JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation menu');
+        }
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+
+            mobileMenu.classList.toggle('hidden', isOpen);
+            openIcon.classList.toggle('hidden', !isOpen);
+            closeIcon.classList.toggle('hidden', isOpen);
+
+            menuButton.setAttribute('aria-expanded', String(!isOpen));
+            menuButton.setAttribute(
+                'aria-label',
+                isOpen ? 'Open navigation menu' : 'Close navigation menu'
+            );
+        }
+
+        menuButton.addEventListener('click', toggleMenu);
+
+        // Close the menu after clicking a navigation link
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close the menu when switching back to desktop
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) {
+                closeMenu();
+            }
+        });
+    });
+</script>
+</section>
+
+
+<main class="min-h-screen">
+<section id="home" class="relative isolate overflow-hidden bg-slate-950 text-white">
+
+        <!-- Background gradient -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950 via-slate-950 to-blue-950"></div>
+
+        <!-- Background glow effects -->
+        <div class="absolute -left-32 -top-40 -z-10 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl"></div>
+        <div class="absolute right-0 top-24 -z-10 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl"></div>
+
+        <!-- Decorative curves -->
+        <div class="pointer-events-none absolute -right-40 bottom-0 -z-10 h-80 w-[600px] rotate-[-15deg] rounded-full border border-indigo-500/20"></div>
+        <div class="pointer-events-none absolute right-16 top-40 -z-10 h-3 w-3 rounded-full bg-violet-400/70"></div>
+        <div class="pointer-events-none absolute bottom-32 left-12 -z-10 h-2 w-2 rounded-full bg-indigo-400"></div>
+
+        <div class="mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-14 px-6 pb-24 pt-32 sm:px-10 md:grid-cols-2 lg:gap-20 lg:px-8 lg:pt-36">
+
+            <!-- Left: Introduction -->
+            <div class="relative z-10">
+
+                <h1 class="mb-6 text-xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+                    Welcome!
+                </h1>
+
+
+                <h2 class="text-2xl font-bold tracking-tight sm:text-3xl ">
+                    Hi, I'm
+                    <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
+                        Nurul Najihah
+                    </span>
+                    Binti Zolkpl's
+                </h2>
+
+                <p class="mb-8 max-w-xl text-base leading-8 text-slate-300 sm:text-lg" style="text-align: justify;">
+                    Information Systems Engineering graduate with a Master's
+                    in Data Science. Passionate about building full-stack web
+                    applications, intuitive UI/UX prototypes, and actionable
+                    data analytics dashboards.
+                </p>
+
+                <!-- Expertise tags -->
+                <div class="mt-8 flex flex-wrap gap-2 text-xs text-slate-300 sm:text-sm">
+                    <span class="rounded-lg border border-white/10 bg-white/5 px-3 py-2">Full-Stack Development</span>
+                    <span class="rounded-lg border border-white/10 bg-white/5 px-3 py-2">UI/UX Design</span>
+                    <span class="rounded-lg border border-white/10 bg-white/5 px-3 py-2">Data Analytics</span>
+                </div>
+
+                <div class="mt-3">
+                    <span class="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-indigo-300 sm:text-sm">
+                        <span class="h-2 w-2 animate-pulse rounded-full bg-indigo-400"></span>
+                        Information Systems Engineer &amp; Data Scientist
+                    </span>
+                </div>
+
+                <!-- Primary buttons -->
+                <div class="mt-5 flex flex-wrap gap-3">
+
+                    <!-- Download CV -->
+
+                </div>
+
+            </div>
+
+            <!-- Right: Profile picture -->
+            <div class="relative mx-auto flex w-full max-w-md items-center justify-center py-8 md:ml-auto">
+
+                <!-- Glowing background -->
+                <div class="absolute h-72 w-72 rounded-full bg-gradient-to-tr from-blue-600/30 to-violet-600/30 blur-2xl sm:h-96 sm:w-96"></div>
+                <div class="absolute right-5 top-5 h-14 w-14 rounded-full bg-violet-500/20 blur-sm"></div>
+                <div class="absolute bottom-12 left-0 h-12 w-12 rounded-full bg-blue-500/30 blur-sm"></div>
+
+                <!-- Image frame -->
+                <div class="relative w-full rotate-1 rounded-3xl bg-gradient-to-br from-blue-400 via-indigo-500 to-violet-500 p-[2px] shadow-2xl shadow-indigo-900/50 transition duration-500 hover:rotate-0">
+                    <div class="overflow-hidden rounded-[22px] bg-slate-900">
+
+                        <img
+                            src="images/profile.jpeg"
+                            alt="Nurul Najihah profile picture"
+                            class="h-[420px] w-full object-cover object-center sm:h-[480px]"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <!-- Fallback when photo is missing -->
+                        <div style="display:none"
+                            class="h-[420px] flex-col items-center justify-center bg-slate-900 text-center sm:h-[480px]">
+                            <div class="flex h-28 w-28 items-center justify-center rounded-full bg-indigo-600/20 text-4xl font-bold text-indigo-300 ring-1 ring-indigo-400/40">
+                                NN
+                            </div>
+                            <p class="mt-4 mb-6 text-sm text-slate-400">Profile picture not found</p>
+
+                        </div>
+
+                        <!-- Overlay at bottom of photo -->
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent px-6 pb-7 pt-24 sm:px-8">
+
+                            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
+                                Welcome to my portfolio
+                            </p>
+
+                            <span class="text-1xl font-bold tracking-tight sm:text-1xl">
+                                Nurul Najihah Binti Zolkpl's
+                            </span>
+
+                            <p class="mt-2 flex items-center gap-2 text-sm text-slate-300">
+                                <svg class="h-4 w-4 text-indigo-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M17.657 16.657 13.414 20.9a2 2 0 0 1-2.828 0l-4.243-4.243a8 8 0 1 1 11.314 0Z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                </svg>
+                                Johor Bahru, Malaysia
+                            </p>
+
+
+                            <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-400 backdrop-blur">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-50"></span>
+                                    <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                                </span>
+                                Available for Hire
+                            </div>
+
+                            <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-400 backdrop-blur">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-50"></span>
+                                    <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                                </span>
+                                Willing to relocate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Floating LinkedIn shortcut -->
+                <a href="https://my.linkedin.com/in/nurul-najihah-z-79438b186"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn" title="Visit my LinkedIn"
+                class="absolute -right-3 top-24 flex h-12 w-12 items-center justify-center rounded-xl border border-indigo-400/30 bg-slate-900/90 text-blue-400 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:bg-indigo-950 sm:-right-6">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.45 2H3.55C2.69 2 2 2.69 2 3.55v16.9c0 .86.69 1.55 1.55 1.55h16.9c.86 0 1.55-.69 1.55-1.55V3.55C22 2.69 21.31 2 20.45 2ZM8 19H5V9h3v10ZM6.5 7.7a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5ZM19 19h-3v-4.87c0-1.16-.02-2.65-1.62-2.65-1.62 0-1.87 1.27-1.87 2.57V19h-3V9h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.73 2 3.73 4.6V19Z"/>
+                    </svg>
+                </a>
+
+                <!-- Floating WhatsApp shortcut -->
+                    <a href="https://wa.me/60186634048?text=Hello%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20job%20opportunity."
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Chat with me on WhatsApp" title="Chat with me on WhatsApp"
+                    class="absolute -right-3 top-40 flex h-12 w-12 items-center justify-center rounded-xl border border-emerald-400/30 bg-slate-900/90 text-emerald-400 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:bg-emerald-950 sm:-right-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                        </svg>
+                    </a>
+
+                    <!-- Floating Email shortcut -->
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=najihahzolkpls%40gmail.com&su=Portfolio%20Enquiry"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Email me"
+                        title="Email me"
+                        class="absolute -right-3 top-56 z-30 flex h-12 w-12 items-center justify-center rounded-xl border border-violet-400/30 bg-slate-900/95 text-violet-400 shadow-xl backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-violet-400 hover:bg-violet-950 sm:-right-6"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                x="3" y="5" width="18" height="14" rx="2"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="m4 7 8 6 8-6"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+
+                    <!-- Floating Download CV shortcut -->
+
+                    <a
+                        href="files/Nurul_Najihah_CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open my CV in a new tab"
+                        title="View my CV"
+                        class="absolute -right-3 top-72 z-30 flex h-12 w-12 items-center justify-center rounded-xl border border-indigo-400/30 bg-slate-900/95 text-indigo-400 shadow-xl backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-indigo-400 hover:bg-indigo-950 sm:-right-6"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M12 3v12m-5-5 5 5 5-5"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M5 16v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+            </div>
+        </div>
+                <!-- Primary buttons -->
+                <div class="mt-5 flex flex-wrap gap-3">
+                </div>
+
+        <!-- Bottom decorative line -->
+        <div class="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+    </section>
+
+    <!-- Growth Mindset Section -->
+
+<!-- Growth Mindset Section -->
+<section id="growth"
+    class="relative overflow-hidden bg-white px-6 py-24 text-slate-900 sm:px-10 lg:px-8">
+
+    <div class="mx-auto max-w-7xl">
+
+        <!-- Section Header -->
+        <div class="mb-16 flex items-center gap-3"
+             data-growth-animate>
+            <span class="h-px w-10 bg-indigo-600"></span>
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+                Growth Mindset
+            </span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid items-start gap-12 md:grid-cols-2 md:gap-20">
+
+            <!-- Left: Heading -->
+            <div data-growth-animate>
+                <h2 class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                    Always ready<br>
+                    to learn<span class="text-indigo-600">.</span><br>
+                    Always ready<br>
+                    to grow<span class="text-indigo-600">.</span>
+                </h2>
+
+                <div class="mt-8 h-1 w-20 rounded-full bg-indigo-600
+                            transition-all duration-700 hover:w-32">
+                </div>
+            </div>
+
+            <!-- Right: Description -->
+            <div class="md:pt-3" data-growth-animate>
+
+                <p class="text-lg leading-8 text-slate-800 sm:text-xl">
+                    I believe that every new environment is an opportunity
+                    to learn, grow, and discover new possibilities. I am
+                    willing to start from the ground up, embrace challenges,
+                    and learn from the people around me.
+                </p>
+
+                <p class="mt-5 leading-8 text-slate-600">
+                    With an open mind and a willingness to improve, I look
+                    forward to developing new skills, adapting to different
+                    working environments, and contributing positively to
+                    every team I become part of.
+                </p>
+
+                <!-- Values -->
+
+            <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+                <!-- Learn -->
+                <div class="group rounded-lg border border-slate-100 bg-slate-50/70 p-4
+                            transition-all duration-300 hover:-translate-y-1
+                            hover:border-indigo-100 hover:bg-white hover:shadow-md">
+                    <div class="mb-3 h-1 w-8 rounded-full bg-indigo-300
+                                transition-all duration-300 group-hover:w-12
+                                group-hover:bg-indigo-500"></div>
+
+                    <h3 class="font-semibold text-slate-900">Learn</h3>
+                    <p class="mt-1 text-sm leading-6 text-slate-500">
+                        Explore new skills and knowledge.
+                    </p>
+                </div>
+
+                <!-- Adapt -->
+                <div class="group rounded-lg border border-slate-100 bg-slate-50/70 p-4
+                            transition-all duration-300 hover:-translate-y-1
+                            hover:border-indigo-100 hover:bg-white hover:shadow-md">
+                    <div class="mb-3 h-1 w-8 rounded-full bg-indigo-300
+                                transition-all duration-300 group-hover:w-12
+                                group-hover:bg-indigo-500"></div>
+
+                    <h3 class="font-semibold text-slate-900">Adapt</h3>
+                    <p class="mt-1 text-sm leading-6 text-slate-500">
+                        Embrace change and new environments.
+                    </p>
+                </div>
+
+                <!-- Grow -->
+                <div class="group rounded-lg border border-slate-100 bg-slate-50/70 p-4
+                            transition-all duration-300 hover:-translate-y-1
+                            hover:border-indigo-100 hover:bg-white hover:shadow-md">
+                    <div class="mb-3 h-1 w-8 rounded-full bg-indigo-300
+                                transition-all duration-300 group-hover:w-12
+                                group-hover:bg-indigo-500"></div>
+
+                    <h3 class="font-semibold text-slate-900">Grow</h3>
+                    <p class="mt-1 text-sm leading-6 text-slate-500">
+                        Improve through every experience.
+                    </p>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Decorative Line -->
+        <div class="relative mt-20 flex items-center justify-center">
+
+            <!-- Clearer Gradient Line -->
+            <div class="h-px w-full bg-gradient-to-r
+                        from-transparent via-slate-400 to-transparent">
+            </div>
+
+            <!-- Center Accent -->
+            <div class="absolute h-2 w-2 rounded-full
+                        bg-indigo-400 ring-4 ring-white
+                        shadow-[0_0_8px_rgba(129,140,248,0.4)]
+                        animate-pulse">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Growth Section Animations -->
+<style>
+    [data-growth-animate] {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+    }
+
+    [data-growth-animate].growth-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        [data-growth-animate] {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('[data-growth-animate]');
+
+    if (!('IntersectionObserver' in window)) {
+        elements.forEach(function (element) {
+            element.classList.add('growth-visible');
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('growth-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    elements.forEach(function (element) {
+        observer.observe(element);
+    });
+});
+</script>
+
+<section id="about" class="bg-white px-4 py-14 sm:px-6">
+    <div class="mx-auto mt-8 max-w-5xl">
+
+        <!-- Heading -->
+        <div class="mb-10 text-center">
+            <h2 class="text-3xl font-bold text-black sm:text-4xl">
+                Education <span class="text-indigo-400">&</span> Experience
+            </h2>
+
+            <p class="mt-3 text-sm text-slate-800">
+                My academic background and professional journey.
+            </p>
+        </div>
+
+        <!-- Legend -->
+        <div class="mb-8 flex justify-center gap-5 text-xs text-slate-800">
+            <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-indigo-400"></span>
+                Education
+            </span>
+
+            <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-emerald-800"></span>
+                Work Experience
+            </span>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+
+            <!-- Center Line -->
+            <div
+                class="absolute bottom-0 left-3 top-0 w-px bg-slate-300
+                       md:left-1/2 md:-translate-x-1/2"
+            ></div>
+
+            <div class="space-y-10">
+
+
+<!-- ===== 2026 ===== -->
+<div class="relative grid grid-cols-1 gap-4 pl-9 md:grid-cols-[minmax(0,1fr)_80px_minmax(0,1fr)] md:gap-4 md:pl-0">
+<div class="space-y-4 md:col-start-1 md:row-start-1">
+<article class="rounded-lg border border-slate-800 bg-slate-900 p-4 transition duration-300 hover:-translate-y-1 hover:border-indigo-400 hover:shadow-indigo-900/10 hover:shadow-lg">
+<p class="mb-1 text-xs font-medium text-indigo-400">Education</p>
+<h3 class="font-semibold leading-relaxed text-white">Master in Data Science</h3>
+<p class="mt-1 text-sm text-slate-300">Universiti Teknologi Malaysia (UTM)</p>
+<p class="mt-1 text-xs text-slate-500">Oct 2025 – Sep 2026</p>
+<p class="mt-3 text-sm leading-relaxed text-slate-400">CGPA: 3.70 · Machine Learning · Data Analytics</p>
+</article>
+</div>
+<div class="absolute left-3 top-5 z-10 flex -translate-x-1/2 items-center md:static md:col-start-2 md:row-start-1 md:translate-x-0 md:flex-col md:justify-start">
+<span class="h-3.5 w-3.5 shrink-0 rounded-full border-[3px] border-white bg-indigo-500 ring-2 ring-indigo-200"></span>
+<span class="ml-3 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1 text-xs font-bold tracking-wide text-indigo-700 shadow-sm md:ml-0 md:mt-3">2026</span>
+</div>
+<div class="space-y-4 md:col-start-3 md:row-start-1">
+<article class="rounded-lg border border-slate-800 bg-slate-900 p-4 transition duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-emerald-900/10 hover:shadow-lg">
+<p class="mb-1 text-xs font-medium text-emerald-400">Work Experience</p>
+<h3 class="font-semibold leading-relaxed text-white">Data Researcher Dashboard</h3>
+<p class="mt-1 text-sm text-slate-300">UTM Faculty of Mechanical Engineering</p>
+<p class="mt-1 text-xs text-slate-500">Apr – Sep 2026</p>
+<p class="mt-3 text-sm leading-relaxed text-slate-400">Dashboard Development · Looker Studio · Google Sheets</p>
+</article>
+</div>
+</div>
+
+<!-- ===== 2025 ===== -->
+<div class="relative grid grid-cols-1 gap-4 pl-9 md:grid-cols-[minmax(0,1fr)_80px_minmax(0,1fr)] md:gap-4 md:pl-0">
+<div class="space-y-4 md:col-start-1 md:row-start-1">
+<article class="rounded-lg border border-slate-800 bg-slate-900 p-4 transition duration-300 hover:-translate-y-1 hover:border-indigo-400 hover:shadow-indigo-900/10 hover:shadow-lg">
+<p class="mb-1 text-xs font-medium text-indigo-400">Education</p>
+<h3 class="font-semibold leading-relaxed text-white">Bachelor of Information Systems Engineering (Hons.)</h3>
+<p class="mt-1 text-sm text-slate-300">Universiti Teknologi MARA (UiTM), Jasin</p>
+<p class="mt-1 text-xs text-slate-500">Aug 2021 – Mar 2025</p>
+<p class="mt-3 text-sm leading-relaxed text-slate-400">CGPA: 3.41 · System Analysis · Database</p>
+</article>
+</div>
+<div class="absolute left-3 top-5 z-10 flex -translate-x-1/2 items-center md:static md:col-start-2 md:row-start-1 md:translate-x-0 md:flex-col md:justify-start">
+<span class="h-3.5 w-3.5 shrink-0 rounded-full border-[3px] border-white bg-indigo-500 ring-2 ring-indigo-200"></span>
+<span class="ml-3 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1 text-xs font-bold tracking-wide text-indigo-700 shadow-sm md:ml-0 md:mt-3">2025</span>
+</div>
+<div class="space-y-4 md:col-start-3 md:row-start-1">
+<article class="rounded-lg border border-slate-800 bg-slate-900 p-4 transition duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-emerald-900/10 hover:shadow-lg">
+<p class="mb-1 text-xs font-medium text-emerald-400">Work Experience</p>
+<h3 class="font-semibold leading-relaxed text-white">Programmer</h3>
+<p class="mt-1 text-sm text-slate-300">AHK Arkitek Hanan</p>
+<p class="mt-1 text-xs text-slate-500">Apr – Jul 2025</p>
+<p class="mt-3 text-sm leading-relaxed text-slate-400">Laravel · Figma · DigitalOcean</p>
+</article>
+<article class="rounded-lg border border-slate-800 bg-slate-900 p-4 transition duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-emerald-900/10 hover:shadow-lg">
+<p class="mb-1 text-xs font-medium text-emerald-400">Work Experience</p>
+<h3 class="font-semibold leading-relaxed text-white">Junior Programmer</h3>
+<p class="mt-1 text-sm text-slate-300">AMTIS Solution Sdn. Bhd.</p>
+<p class="mt-1 text-xs text-slate-500">2024 – 2025</p>
+<p class="mt-3 text-sm leading-relaxed text-slate-400">Laravel · Oracle · MySQL · UAT</p>
+</article>
+</div>
+</div>
+
+<!-- To add a new year, copy a block above (latest first). -->
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects" class="relative isolate overflow-hidden bg-slate-950 text-white pt-12">
+
+
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-950 via-slate-950 to-blue-950"></div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <header class="mx-auto mb-14 max-w-2xl text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+                My Portfolio
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Featured Projects <span class="text-indigo-600">&</span> Process
+            </h2>
+
+            <p class="mt-4 text-base leading-7 text-slate-400">
+                Explore my projects in software development, UI/UX design,
+                data analytics, and machine learning.
+            </p>
+        </header>
+
+        <!-- Project Cards -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+
+            <!-- Project 1: ePembelajaran -->
+            <article
+                class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl
+                       border border-slate-200 bg-white shadow-sm transition duration-300
+                       hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl
+                       focus-within:ring-2 focus-within:ring-indigo-500"
+                role="button"
+                tabindex="0"
+                aria-label="View details for Sistem Pelaporan ePembelajaran"
+                onclick="openProjectModal(this)"
+                onkeydown="if (event.target === this && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); openProjectModal(this); }"
+                data-title="Sistem Pelaporan ePembelajaran"
+                data-category="Web Application Development"
+                data-overview="A centralized web-based reporting system designed to help UMPSA lecturers generate academic reports and certificates for documentation and archiving."
+                data-role="Web application development, backend implementation, and database integration."
+                data-tech="Laravel · PHP · Oracle Database"
+                data-process="Requirements analysis → Oracle database mapping → Laravel backend development → Report generation and testing"
+                data-outcome="Streamlined academic report and certificate generation through a centralized reporting platform."
+            >
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img
+                        src="images/projects/umpsa.png"
+                        alt="Sistem Pelaporan ePembelajaran interface"
+                        class="h-full w-full object-cover transition duration-500
+                               group-hover:scale-105"
+                        loading="lazy"
+                    >
+
+                    <span class="absolute left-4 top-4 rounded-full bg-white/95
+                                 px-3 py-1 text-xs font-semibold text-indigo-700 shadow-sm">
+                        Web Development
+                    </span>
+                </div>
+
+                <div class="flex flex-1 flex-col p-6">
+                    <h3 class="text-xl font-bold leading-snug text-slate-900
+                               group-hover:text-indigo-700">
+                        Sistem Pelaporan ePembelajaran
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600">
+                        Centralized academic reporting and certificate generation
+                        for UMPSA lecturers.
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Key Technologies
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Laravel</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">PHP</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Oracle</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto border-t border-slate-100 pt-5 mt-5">
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600">
+                            View Project Details
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: My Gunung Jerai -->
+            <article
+                class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl
+                       border border-slate-200 bg-white shadow-sm transition duration-300
+                       hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl
+                       focus-within:ring-2 focus-within:ring-indigo-500"
+                role="button"
+                tabindex="0"
+                aria-label="View details for My Gunung Jerai Tourism Platform"
+                onclick="openProjectModal(this)"
+                onkeydown="if (event.target === this && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); openProjectModal(this); }"
+                data-title="My Gunung Jerai Tourism Platform"
+                data-category="Web & Mobile Application"
+                data-overview="An integrated tourism platform for PKNK combining a website and mobile application to support tourism information and booking activities."
+                data-role="Application development, interface design, database implementation, and booking functionality."
+                data-tech="Laravel · MySQL · Figma"
+                data-process="UI/UX prototyping → Database design → Booking functionality development → Integration and testing"
+                data-outcome="A unified digital platform designed to make tourism information and booking services more accessible."
+            >
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img
+                        src="images/projects/mygunungjerai.png"
+                        alt="My Gunung Jerai tourism platform"
+                        class="h-full w-full object-cover transition duration-500
+                               group-hover:scale-105"
+                        loading="lazy"
+                    >
+
+                    <span class="absolute left-4 top-4 rounded-full bg-white/95
+                                 px-3 py-1 text-xs font-semibold text-emerald-700 shadow-sm">
+                        Web & Mobile
+                    </span>
+                </div>
+
+                <div class="flex flex-1 flex-col p-6">
+                    <h3 class="text-xl font-bold leading-snug text-slate-900
+                               group-hover:text-indigo-700">
+                        My Gunung Jerai Tourism Platform
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600">
+                        Integrated tourism website and mobile application
+                        supporting tourism information and bookings.
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Key Technologies
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Laravel</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">MySQL</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Figma</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto border-t border-slate-100 pt-5 mt-5">
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600">
+                            View Project Details
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Manufacturing KPI Dashboard -->
+            <article
+                class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl
+                       border border-slate-200 bg-white shadow-sm transition duration-300
+                       hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl
+                       focus-within:ring-2 focus-within:ring-indigo-500"
+                role="button"
+                tabindex="0"
+                aria-label="View details for Manufacturing KPI Dashboard"
+                onclick="openProjectModal(this)"
+                onkeydown="if (event.target === this && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); openProjectModal(this); }"
+                data-title="Manufacturing KPI Dashboard"
+                data-category="Data Analytics"
+                data-overview="A manufacturing performance dashboard focused on production yield, rejected output, and downtime to support operational monitoring."
+                data-role="Data preparation, KPI calculations, dashboard design, and performance analysis."
+                data-tech="Power BI · DAX · Power Query"
+                data-process="Data cleaning → KPI measure development → Interactive visualization → Results review"
+                data-outcome="Provides a visual overview of production performance to help identify operational trends and potential bottlenecks."
+            >
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img
+                        src="images/projects/manufacturing.png"
+                        alt="Manufacturing KPI dashboard"
+                        class="h-full w-full object-cover transition duration-500
+                               group-hover:scale-105"
+                        loading="lazy"
+                    >
+
+                    <span class="absolute left-4 top-4 rounded-full bg-white/95
+                                 px-3 py-1 text-xs font-semibold text-amber-700 shadow-sm">
+                        Data Analytics
+                    </span>
+                </div>
+
+                <div class="flex flex-1 flex-col p-6">
+                    <h3 class="text-xl font-bold leading-snug text-slate-900
+                               group-hover:text-indigo-700">
+                        Manufacturing KPI Dashboard
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600">
+                        Monitor production yield, rejection rates, and downtime
+                        through interactive performance visualizations.
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Key Technologies
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Power BI</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">DAX</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Power Query</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto border-t border-slate-100 pt-5 mt-5">
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600">
+                            View Project Details
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: Crude Oil Forecasting -->
+            <article
+                class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl
+                       border border-slate-200 bg-white shadow-sm transition duration-300
+                       hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl
+                       focus-within:ring-2 focus-within:ring-indigo-500"
+                role="button"
+                tabindex="0"
+                aria-label="View details for Malaysia Crude Oil Production Forecasting"
+                onclick="openProjectModal(this)"
+                onkeydown="if (event.target === this && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); openProjectModal(this); }"
+                data-title="Malaysia Crude Oil Production Forecasting"
+                data-category="Data Science Research"
+                data-overview="A research project developing a machine learning framework to investigate trends and forecast Malaysia's monthly crude oil production using historical data from January 1993 to August 2025."
+                data-role="Data collection, time-series analysis, model development, forecasting, and model evaluation."
+                data-tech="Python · Machine Learning · Time-Series Analysis"
+                data-process="Data preparation → Exploratory analysis → Time-series diagnostics → Model development → Forecast evaluation"
+                data-outcome="Evaluates forecasting approaches for understanding historical production patterns and estimating future crude oil production."
+            >
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img
+                        src="images/projects/crudeoil.png"
+                        alt="Malaysia crude oil production forecasting charts"
+                        class="h-full w-full object-cover transition duration-500
+                               group-hover:scale-105"
+                        loading="lazy"
+                    >
+
+                    <span class="absolute left-4 top-4 rounded-full bg-white/95
+                                 px-3 py-1 text-xs font-semibold text-violet-700 shadow-sm">
+                        Data Science
+                    </span>
+                </div>
+
+                <div class="flex flex-1 flex-col p-6">
+                    <h3 class="text-xl font-bold leading-snug text-slate-900
+                               group-hover:text-indigo-700">
+                        Malaysia Crude Oil Production Forecasting
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600">
+                        Apply time-series analysis and machine learning to
+                        historical crude oil production data.
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Key Technologies
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Python</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Machine Learning</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Forecasting</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto border-t border-slate-100 pt-5 mt-5">
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600">
+                            View Project Details
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5: Research Dashboard -->
+            <article
+                class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl
+                       border border-slate-200 bg-white shadow-sm transition duration-300
+                       hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl
+                       focus-within:ring-2 focus-within:ring-indigo-500"
+                role="button"
+                tabindex="0"
+                aria-label="View details for Research KPI Monitoring Dashboard"
+                onclick="openProjectModal(this)"
+                onkeydown="if (event.target === this && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); openProjectModal(this); }"
+                data-title="Research KPI Monitoring Dashboard"
+                data-category="Dashboard Development"
+                data-overview="An interactive dashboard developed for research monitoring at the UTM Faculty of Mechanical Engineering, connecting Google Sheets data to Looker Studio reports."
+                data-role="Data organization, dashboard development, KPI visualization, and reporting validation."
+                data-tech="Looker Studio · Google Sheets · Data Visualization"
+                data-process="Reporting requirements → Data organization → Dashboard design → Data validation and refinement"
+                data-outcome="Presents research monitoring information through a consolidated visual dashboard."
+            >
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img
+                        src="images/projects/researchkpi.png"
+                        alt="Research KPI monitoring dashboard"
+                        class="h-full w-full object-cover transition duration-500
+                               group-hover:scale-105"
+                        loading="lazy"
+                    >
+
+                    <span class="absolute left-4 top-4 rounded-full bg-white/95
+                                 px-3 py-1 text-xs font-semibold text-sky-700 shadow-sm">
+                        Dashboard
+                    </span>
+                </div>
+
+                <div class="flex flex-1 flex-col p-6">
+                    <h3 class="text-xl font-bold leading-snug text-slate-900
+                               group-hover:text-indigo-700">
+                        Research KPI Monitoring Dashboard
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600">
+                        Visualize research monitoring data and key indicators
+                        using a connected reporting dashboard.
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Key Technologies
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Looker Studio</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Google Sheets</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto border-t border-slate-100 pt-5 mt-5">
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600">
+                            View Project Details
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6: Web System Development -->
+            <article
+                class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl
+                       border border-slate-200 bg-white shadow-sm transition duration-300
+                       hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl
+                       focus-within:ring-2 focus-within:ring-indigo-500"
+                role="button"
+                tabindex="0"
+                aria-label="View details for Web System Development"
+                onclick="openProjectModal(this)"
+                onkeydown="if (event.target === this && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); openProjectModal(this); }"
+                data-title="Web System Development"
+                data-category="Full-Stack Development"
+                data-overview="Web application development involving interface prototyping, Laravel modules, database integration, deployment, and user acceptance testing."
+                data-role="Interface design, backend development, integration, deployment, and testing."
+                data-tech="Laravel · Figma · DigitalOcean · MySQL"
+                data-process="Requirements analysis → Interface prototyping → Backend development → Deployment and user acceptance testing"
+                data-outcome="Develops functional web application features aligned with system requirements and user workflows."
+            >
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img
+                        src="images/projects/crm.png"
+                        alt="Web application development project"
+                        class="h-full w-full object-cover transition duration-500
+                               group-hover:scale-105"
+                        loading="lazy"
+                    >
+
+                    <span class="absolute left-4 top-4 rounded-full bg-white/95
+                                 px-3 py-1 text-xs font-semibold text-rose-700 shadow-sm">
+                        Full-Stack
+                    </span>
+                </div>
+
+                <div class="flex flex-1 flex-col p-6">
+                    <h3 class="text-xl font-bold leading-snug text-slate-900
+                               group-hover:text-indigo-700">
+                        Web System Development
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600">
+                        Develop application features from UI/UX prototyping
+                        to backend implementation, deployment, and testing.
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Key Technologies
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Laravel</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">Figma</span>
+                            <span class="rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">DigitalOcean</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto border-t border-slate-100 pt-5 mt-5">
+                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600">
+                            View Project Details
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- Project Details Modal -->
+<div
+    id="projectModal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center
+           overflow-y-auto bg-slate-950/60 p-4 backdrop-blur-sm"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+    onclick="if (event.target === this) closeProjectModal()"
+>
+    <div class="relative my-auto w-full max-w-2xl overflow-hidden rounded-2xl
+                bg-white shadow-2xl">
+
+        <!-- Modal Header -->
+        <div class="flex items-start justify-between gap-4 border-b border-slate-200
+                    px-6 py-5 sm:px-8">
+            <div>
+                <p id="modalCategory"
+                   class="text-xs font-semibold uppercase tracking-[0.15em] text-indigo-600">
+                    Project Details
+                </p>
+
+                <h3 id="modalTitle"
+                    class="mt-2 text-xl font-bold leading-snug text-slate-900 sm:text-2xl">
+                    Project Title
+                </h3>
+            </div>
+
+            <button
+                type="button"
+                onclick="closeProjectModal()"
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full
+                       text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
+                aria-label="Close project details"
+            >
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="max-h-[70vh] space-y-6 overflow-y-auto px-6 py-6 sm:px-8">
+
+            <!-- Overview -->
+            <div>
+                <h4 class="flex items-center gap-2 font-semibold text-slate-900">
+                    <i class="fa-regular fa-file-lines text-indigo-600"></i>
+                    Project Overview
+                </h4>
+
+                <p id="modalOverview"
+                   class="mt-2 text-sm leading-7 text-slate-600"></p>
+            </div>
+
+            <!-- Role -->
+            <div>
+                <h4 class="flex items-center gap-2 font-semibold text-slate-900">
+                    <i class="fa-solid fa-user-gear text-indigo-600"></i>
+                    My Role
+                </h4>
+
+                <p id="modalRole"
+                   class="mt-2 text-sm leading-7 text-slate-600"></p>
+            </div>
+
+            <!-- Technologies -->
+            <div>
+                <h4 class="flex items-center gap-2 font-semibold text-slate-900">
+                    <i class="fa-solid fa-code text-indigo-600"></i>
+                    Technologies Used
+                </h4>
+
+                <div id="modalTech"
+                     class="mt-3 flex flex-wrap gap-2"></div>
+            </div>
+
+            <!-- Process -->
+            <div>
+                <h4 class="flex items-center gap-2 font-semibold text-slate-900">
+                    <i class="fa-solid fa-diagram-project text-indigo-600"></i>
+                    Development Process
+                </h4>
+
+                <p id="modalProcess"
+                   class="mt-2 rounded-xl border border-indigo-100 bg-indigo-50/70
+                          p-4 text-sm leading-7 text-slate-700"></p>
+            </div>
+
+            <!-- Outcome -->
+            <div>
+                <h4 class="flex items-center gap-2 font-semibold text-slate-900">
+                    <i class="fa-solid fa-bullseye text-indigo-600"></i>
+                    Key Outcome
+                </h4>
+
+                <p id="modalOutcome"
+                   class="mt-2 text-sm leading-7 text-slate-600"></p>
+            </div>
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex justify-end border-t border-slate-200 bg-slate-50
+                    px-6 py-4 sm:px-8">
+            <button
+                type="button"
+                onclick="closeProjectModal()"
+                class="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold
+                       text-white transition hover:bg-indigo-700
+                       focus:outline-none focus:ring-2 focus:ring-indigo-500
+                       focus:ring-offset-2"
+            >
+                Close Details
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Project Modal JavaScript -->
+<script>
+    let previousFocusedElement = null;
+
+    function openProjectModal(card) {
+        const modal = document.getElementById('projectModal');
+
+        previousFocusedElement = document.activeElement;
+
+        // Populate project information.
+        document.getElementById('modalTitle').textContent =
+            card.dataset.title || 'Project Details';
+
+        document.getElementById('modalCategory').textContent =
+            card.dataset.category || 'Project Details';
+
+        document.getElementById('modalOverview').textContent =
+            card.dataset.overview || '';
+
+        document.getElementById('modalRole').textContent =
+            card.dataset.role || '';
+
+        document.getElementById('modalProcess').textContent =
+            card.dataset.process || '';
+
+        document.getElementById('modalOutcome').textContent =
+            card.dataset.outcome || '';
+
+        // Create technology tags safely.
+        const techContainer = document.getElementById('modalTech');
+        techContainer.replaceChildren();
+
+        (card.dataset.tech || '')
+            .split('·')
+            .map(tech => tech.trim())
+            .filter(Boolean)
+            .forEach(tech => {
+                const tag = document.createElement('span');
+
+                tag.className =
+                    'rounded-md bg-indigo-50 px-3 py-1.5 text-xs ' +
+                    'font-medium text-indigo-700';
+
+                tag.textContent = tech;
+                techContainer.appendChild(tag);
+            });
+
+        // Show modal.
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.setAttribute('aria-hidden', 'false');
+
+        document.body.classList.add('overflow-hidden');
+
+        modal.querySelector('button[aria-label="Close project details"]').focus();
+    }
+
+    function closeProjectModal() {
+        const modal = document.getElementById('projectModal');
+
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.setAttribute('aria-hidden', 'true');
+
+        document.body.classList.remove('overflow-hidden');
+
+        if (previousFocusedElement) {
+            previousFocusedElement.focus();
+        }
+    }
+
+    // Close the modal using the Escape key.
+    document.addEventListener('keydown', function (event) {
+        const modal = document.getElementById('projectModal');
+
+        if (
+            event.key === 'Escape' &&
+            !modal.classList.contains('hidden')
+        ) {
+            closeProjectModal();
+        }
+    });
+</script>
+
+
+<section id="skills" class="relative overflow-hidden border-t border-slate-200 bg-gradient-to-b from-slate-50 to-white py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <div class="mx-auto mb-16 max-w-2xl text-center">
+            <div class="mx-auto mb-5 h-1.5 w-16 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500"></div>
+
+            <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                Technical Competencies
+            </h2>
+
+            <p class="mt-4 text-base leading-7 text-slate-500 sm:text-lg">
+                Tools, programming languages, and frameworks in my toolkit.
+            </p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+            <!-- Development -->
+            <div class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/50">
+
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-code text-2xl"></i>
+                </div>
+
+                <h3 class="text-xl font-bold tracking-tight text-slate-900">
+                    Development
+                </h3>
+
+                <div class="my-4 h-1 w-12 rounded-full bg-indigo-500 transition-all duration-300 group-hover:w-20"></div>
+
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">PHP</span>
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">Laravel</span>
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">Python</span>
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">JavaScript</span>
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">HTML/CSS</span>
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">Java</span>
+                    <span class="rounded-lg bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700">MVC</span>
+                </div>
+
+                <div class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-indigo-50/70 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"></div>
+            </div>
+
+            <!-- Data & Analytics -->
+            <div class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50">
+
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-chart-column text-2xl"></i>
+                </div>
+
+                <h3 class="text-xl font-bold tracking-tight text-slate-900">
+                    Data & Analytics
+                </h3>
+
+                <div class="my-4 h-1 w-12 rounded-full bg-blue-500 transition-all duration-300 group-hover:w-20"></div>
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">Power BI</span>
+                    <span class="rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">Looker Studio</span>
+                    <span class="rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">ETL</span>
+                    <span class="rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">Data Cleaning</span>
+                    <span class="rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">SQL</span>
+                    <span class="rounded-lg bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">Statistical Analysis</span>
+                </div>
+
+                <div class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-50/70 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"></div>
+            </div>
+
+            <!-- Databases -->
+            <div class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-100/50">
+
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-database text-2xl"></i>
+                </div>
+
+                <h3 class="text-xl font-bold tracking-tight text-slate-900">
+                    Databases
+                </h3>
+
+                <div class="my-4 h-1 w-12 rounded-full bg-emerald-500 transition-all duration-300 group-hover:w-20"></div>
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">MySQL</span>
+                    <span class="rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">Oracle SQL Developer</span>
+                    <span class="rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">PostgreSQL</span>
+                    <span class="rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">DBeaver</span>
+                    <span class="rounded-lg bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">MongoDB</span>
+                </div>
+
+                <div class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-emerald-50/70 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"></div>
+            </div>
+
+            <!-- Tools & Design -->
+            <div class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-100/50">
+
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-50 text-violet-600 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-toolbox text-2xl"></i>
+                </div>
+
+                <h3 class="text-xl font-bold tracking-tight text-slate-900">
+                    Tools & Design
+                </h3>
+
+                <div class="my-4 h-1 w-12 rounded-full bg-violet-500 transition-all duration-300 group-hover:w-20"></div>
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="rounded-lg bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">Figma</span>
+                    <span class="rounded-lg bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">Git</span>
+                    <span class="rounded-lg bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">GitHub</span>
+                    <span class="rounded-lg bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">DigitalOcean</span>
+                    <span class="rounded-lg bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">Bootstrap</span>
+                    <span class="rounded-lg bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">Advanced Excel</span>
+                </div>
+
+                <div class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-violet-50/70 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact"
+    class="contact-section relative isolate overflow-hidden border-t border-slate-800 bg-slate-900 py-24 text-white">
+
+    <!-- Animated Background Glows -->
+    <div class="contact-glow contact-glow-indigo pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-indigo-600/20 blur-3xl"></div>
+    <div class="contact-glow contact-glow-violet pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-violet-600/20 blur-3xl"></div>
+
+    <!-- Decorative Floating Orbs -->
+    <div class="contact-orb pointer-events-none absolute left-[12%] top-[18%] h-2 w-2 rounded-full bg-indigo-400/70"></div>
+    <div class="contact-orb contact-orb-delay pointer-events-none absolute right-[15%] top-[30%] h-3 w-3 rounded-full bg-violet-400/60"></div>
+    <div class="contact-orb contact-orb-delay-2 pointer-events-none absolute bottom-[18%] left-[25%] h-2 w-2 rounded-full bg-blue-400/60"></div>
+
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="contact-reveal mb-12 text-center">
+
+            <span class="contact-badge mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300">
+                <span class="relative flex h-2 w-2">
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                </span>
+                Open to Opportunities
+            </span>
+
+            <h2 class="contact-title text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+                Let's <span class="contact-gradient-text">Connect</span>
+            </h2>
+
+            <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
+                Looking for a candidate with skills in data analytics, software development, or research?
+                I'd love to hear from you. Feel free to reach out regarding job opportunities,
+                interviews, or professional collaborations.
+            </p>
+
+            <div class="contact-line mx-auto mt-6 h-1 rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500"></div>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+            <!-- Email Card -->
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=najihahzolkpls%40gmail.com&su=Portfolio%20Enquiry"
+                title="Send an email" target="_blank" rel="noopener noreferrer"
+                aria-label="Send an email to najihahzolkpls@gmail.com"
+                class="contact-card contact-card-email group relative flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-700 bg-slate-800/80 p-6 shadow-lg backdrop-blur-sm"
+            >
+                <!-- Hover Shine -->
+                <span class="contact-shine pointer-events-none absolute inset-0"></span>
+
+                <!-- Icon -->
+                <div class="contact-icon relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-400">
+                    <i class="fa-solid fa-envelope text-2xl"></i>
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10 min-w-0 flex-1">
+                    <h3 class="text-lg font-bold text-white transition-colors duration-300 group-hover:text-indigo-300">
+                        Email Me
+                    </h3>
+
+                    <p class="mt-1 break-words text-sm text-slate-400">
+                        najihahzolkpls@gmail.com
+                    </p>
+
+                    <span class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-indigo-400">
+                        Send an email
+                        <i class="contact-arrow fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- WhatsApp Card -->
+            <a
+                href="https://wa.me/60186634048?text=Hello%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20job%20opportunity."
+                target="_blank"
+                title="Chat with me on WhatsApp"
+                aria-label="Chat with me on WhatsApp"
+                rel="noopener noreferrer"
+                class="contact-card contact-card-whatsapp group relative flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-700 bg-slate-800/80 p-6 shadow-lg backdrop-blur-sm"
+            >
+                <!-- Hover Shine -->
+                <span class="contact-shine pointer-events-none absolute inset-0"></span>
+
+                <!-- Icon -->
+                <div class="contact-icon relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10 min-w-0 flex-1">
+                    <h3 class="text-lg font-bold text-white transition-colors duration-300 group-hover:text-emerald-300">
+                        WhatsApp Me
+                    </h3>
+
+                    <p class="mt-1 text-sm text-slate-400">
+                        Quick and direct communication
+                    </p>
+
+                    <span class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400">
+                        Start a conversation
+                        <i class="contact-arrow fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Closing Note -->
+        <div class="contact-footer mt-10 text-center">
+            <p class="text-sm text-slate-500">
+                <i class="fa-regular fa-heart mr-1 text-rose-400"></i>
+                Thank you for visiting my portfolio. I look forward to connecting with you.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Animations -->
+<style>
+    /* Smooth entrance animations */
+    .contact-reveal {
+        animation: contactFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .contact-card-email {
+        animation: contactFadeUp 0.9s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .contact-card-whatsapp {
+        animation: contactFadeUp 0.9s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .contact-footer {
+        animation: contactFadeUp 0.9s 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes contactFadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Animated gradient heading */
+    .contact-gradient-text {
+        background: linear-gradient(
+            90deg,
+            #818cf8,
+            #c4b5fd,
+            #60a5fa,
+            #818cf8
+        );
+        background-size: 250% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: contactGradient 5s linear infinite;
+    }
+
+    @keyframes contactGradient {
+        to {
+            background-position: 250% center;
+        }
+    }
+
+    /* Animated underline */
+    .contact-line {
+        width: 0;
+        animation: contactLineExpand 1s 0.5s ease-out forwards;
+    }
+
+    @keyframes contactLineExpand {
+        to {
+            width: 76px;
+        }
+    }
+
+    /* Floating background glows */
+    .contact-glow {
+        animation: contactGlowFloat 9s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+
+    .contact-glow-violet {
+        animation-delay: -4s;
+    }
+
+    @keyframes contactGlowFloat {
+        from {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        to {
+            transform: translate3d(25px, -30px, 0) scale(1.15);
+        }
+    }
+
+    /* Floating decorative orbs */
+    .contact-orb {
+        animation: contactOrbFloat 4s ease-in-out infinite;
+    }
+
+    .contact-orb-delay {
+        animation-delay: -1.5s;
+    }
+
+    .contact-orb-delay-2 {
+        animation-delay: -2.5s;
+    }
+
+    @keyframes contactOrbFloat {
+        0%, 100% {
+            transform: translateY(0);
+            opacity: 0.45;
+        }
+
+        50% {
+            transform: translateY(-18px);
+            opacity: 1;
+        }
+    }
+
+    /* Interactive contact cards */
+    .contact-card {
+        isolation: isolate;
+        transition:
+            transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 0.35s ease,
+            background-color 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    .contact-card-email:hover {
+        transform: translateY(-7px);
+        border-color: rgba(129, 140, 248, 0.65);
+        background-color: rgba(30, 41, 59, 0.95);
+        box-shadow: 0 18px 45px -18px rgba(99, 102, 241, 0.35);
+    }
+
+    .contact-card-whatsapp:hover {
+        transform: translateY(-7px);
+        border-color: rgba(52, 211, 153, 0.65);
+        background-color: rgba(30, 41, 59, 0.95);
+        box-shadow: 0 18px 45px -18px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Icon animation */
+    .contact-icon {
+        transition:
+            transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+            color 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .contact-card-email:hover .contact-icon {
+        transform: rotate(-8deg) scale(1.1);
+        background-color: #4f46e5;
+        color: #fff;
+    }
+
+    .contact-card-whatsapp:hover .contact-icon {
+        transform: rotate(8deg) scale(1.1);
+        background-color: #059669;
+        color: #fff;
+    }
+
+    /* Moving shine effect */
+    .contact-shine {
+        background: linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.045) 45%,
+            transparent 70%
+        );
+        transform: translateX(-120%);
+        transition: transform 0.8s ease;
+    }
+
+    .contact-card:hover .contact-shine {
+        transform: translateX(120%);
+    }
+
+    /* Arrow movement */
+    .contact-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover .contact-arrow {
+        transform: translateX(5px);
+    }
+
+    /* Keyboard accessibility */
+    .contact-card:focus-visible {
+        outline: 2px solid #a5b4fc;
+        outline-offset: 5px;
+    }
+
+    /* Respect reduced-motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+        .contact-reveal,
+        .contact-card-email,
+        .contact-card-whatsapp,
+        .contact-footer,
+        .contact-gradient-text,
+        .contact-line,
+        .contact-glow,
+        .contact-orb {
+            animation: none !important;
+        }
+
+        .contact-line {
+            width: 76px;
+        }
+
+        .contact-card,
+        .contact-icon,
+        .contact-arrow,
+        .contact-shine {
+            transition: none !important;
+        }
+
+        .contact-card-email:hover,
+        .contact-card-whatsapp:hover {
+            transform: none;
+        }
+    }
+</style>
+
+</main>
+
+<script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const activeClasses = [
+            'border-b-2',
+            'border-indigo-400',
+            'pb-2',
+            'text-white'
+        ];
+
+        const inactiveClasses = [
+            'text-slate-300',
+            'transition',
+            'hover:text-indigo-400'
+        ];
+
+        function setActiveLink(sectionId) {
+            navLinks.forEach(link => {
+                const isActive = link.dataset.section === sectionId;
+
+                // Update accessibility state
+                if (isActive) {
+                    link.setAttribute('aria-current', 'location');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+
+                // Remove both styles first
+                link.classList.remove(...activeClasses, ...inactiveClasses);
+
+                // Apply the correct style
+                link.classList.add(
+                    ...(isActive ? activeClasses : inactiveClasses)
+                );
+            });
+        }
+
+        // Update active link when clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                setActiveLink(link.dataset.section);
+            });
+        });
+
+        // Update active link while scrolling
+        const sections = Array.from(navLinks)
+            .map(link => document.getElementById(link.dataset.section))
+            .filter(Boolean);
+
+        const observer = new IntersectionObserver(entries => {
+            const visibleSections = entries
+                .filter(entry => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+            if (visibleSections.length > 0) {
+                setActiveLink(visibleSections[0].target.id);
+            }
+        }, {
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: [0, 0.1, 0.25, 0.5]
+        });
+
+        sections.forEach(section => observer.observe(section));
+
+        // Set initial active link from the URL, or default to Home
+        const initialSection = window.location.hash.substring(1);
+        const initialLink = Array.from(navLinks)
+            .find(link => link.dataset.section === initialSection);
+
+        setActiveLink(initialLink ? initialSection : 'home');
+    });
+
+</script>
+</body>
+</html>
